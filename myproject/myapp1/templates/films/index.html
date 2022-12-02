@@ -10,13 +10,13 @@
         <div class="card" style="width: 18rem;">
             <img src="{{ film.poster.url }}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{ film.title }}</h5>
+                <h5 class="card-title">{{ film.title|upper }}</h5>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><b>Жанр: </b>{{film.genre}}</li>
                 <li class="list-group-item"><b>Режиссер: </b>{{film.director}}</li>
                 <li class="list-group-item"><b>Год: </b>{{film.year}}</li>
-                <li class="list-group-item"><b>В ролях: </b>{{film.starring}}</li>
+                <li class="list-group-item"><b>В ролях: </b>{{film.starring|truncatewords:7}}</li>
                 <li class="list-group-item"><b>Опубликовано: </b>{{film.publication_date}}</li>
                 <li class="list-group-item"><b>Обновлено: </b>{{film.updated_date}}</li>
             </ul>
